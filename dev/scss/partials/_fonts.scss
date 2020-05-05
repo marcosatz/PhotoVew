@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Calligraffitti|Marck+Script|Raleway:300,400,700&display=swap');
+
+$cabin: 'Cabin Sketch', cursive;
+$graffitti: 'Calligraffitti', cursive;
+$marck: 'Marck Script', cursive;
+$raleway: 'Raleway', sans-serif;
+
+
+@font-face {
+	font-family: 'latoR';
+	src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'raleway';
+	src: url('../dist/assets/fonts/Raleway-Regular.ttf');
+}
+
+$latoB: 'lato';
+$raleway: 'raleway';
+$bold: bold;
+$regular: 400;
+$semiBold: 600;

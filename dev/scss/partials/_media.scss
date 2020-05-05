@@ -1,0 +1,55 @@
+@mixin media($prefix) {
+    $xs: 320px;
+    $sm: 576px;
+    $md: 768px;
+    $lg: 992px;
+    $xl: 1200px;
+
+    @if $prefix == sm-min {
+        @media screen and (min-width: #{$sm}) {
+            @content;
+        }
+    }
+    @else if $prefix == md-min {
+        @media screen and (min-width: #{$md}) {
+            @content;
+        }
+    }
+    @else if $prefix == lg-min {
+        @media screen and (min-width: #{$lg}) {
+            @content;
+        }
+    }
+    @else if $prefix == xl-min {
+        @media screen and (min-width: #{$xl}) {
+            @content;
+        }
+    }
+
+    //FIRST DESKTOP
+    @if $prefix == xs-max {
+        @media screen and (max-width: $xs - 1px ) {
+            @content;
+        }
+    }
+    @if $prefix == sm-max {
+        @media screen and (max-width: $sm - 1px ) {
+            @content;
+        }
+    }
+    @else if $prefix == md-max {
+        @media screen and (max-width: $md - 1px ) {
+            @content;
+        }
+    }
+    @else if $prefix == lg-max {
+        @media screen and (max-width: $lg - 1px ) {
+            @content;
+        }
+    }
+    @else if $prefix == xl-max {
+        @media screen and (max-width: $xl - 1px ) {
+            @content;
+        }
+    }
+}
