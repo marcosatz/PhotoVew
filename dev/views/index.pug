@@ -6,6 +6,8 @@ html(lang="en")
 		title PhotoView
 		link(rel="stylesheet", href="assets/css/bootstrap.min.css")
 		link(rel="stylesheet", href="assets/css/lightbox.css")
+		link(rel="stylesheet", href="assets/css/slick.css")
+		link(rel="stylesheet", href="assets/css/slick-theme.css")
 		link(rel="stylesheet", href="assets/css/style.css")
 	body
 
@@ -40,52 +42,81 @@ html(lang="en")
 
 
 	main
-		section#photoHero
-			#carouselExampleIndicators.carousel.slide(data-ride="carousel")
-				//- ol.carousel-indicators
-				//- 	li(data-target="#carouselExampleIndicators" data-slide-to="0").active
-				//- 	li(data-target="#carouselExampleIndicators" data-slide-to="1")
-				//- 	li(data-target="#carouselExampleIndicators" data-slide-to="2")
+		//- section#photoHero
+		//- 	#carouselExampleIndicators.carousel.slide(data-ride="carousel")
+		//- 		//- ol.carousel-indicators
+		//- 		//- 	li(data-target="#carouselExampleIndicators" data-slide-to="0").active
+		//- 		//- 	li(data-target="#carouselExampleIndicators" data-slide-to="1")
+		//- 		//- 	li(data-target="#carouselExampleIndicators" data-slide-to="2")
 
-				.carousel-inner
-					.carousel-item.active(style="background-image: url(assets/img/image14.jpg)")
-						.carousel-caption
-							.container
-								.hero-content
-									h1 Main Title
-									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
-									button.button-text View More
+		//- 		.carousel-inner
+		//- 			.carousel-item.active(style="background-image: url(assets/img/image14.jpg)")
+		//- 				.carousel-caption
+		//- 					.container
+		//- 						.hero-content
+		//- 							h1 Main Title
+		//- 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+		//- 							button.button-text View More
 
-									ol.carousel-indicators
-										li(data-target="#carouselExampleIndicators" data-slide-to="0").active
-										li(data-target="#carouselExampleIndicators" data-slide-to="1")
-										li(data-target="#carouselExampleIndicators" data-slide-to="2")
+		//- 							ol.carousel-indicators
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="0").active
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="1")
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="2")
 					
-					.carousel-item(style="background-image: url(assets/img/image15.jpg)")
-						.carousel-caption
-							.container
-								.hero-content
-									h1 Main Title 1
-									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
-									button.button-text View More
+		//- 			.carousel-item(style="background-image: url(assets/img/image15.jpg)")
+		//- 				.carousel-caption
+		//- 					.container
+		//- 						.hero-content
+		//- 							h1 Main Title 1
+		//- 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+		//- 							button.button-text View More
 
-									ol.carousel-indicators
-										li(data-target="#carouselExampleIndicators" data-slide-to="0")
-										li(data-target="#carouselExampleIndicators" data-slide-to="1").active
-										li(data-target="#carouselExampleIndicators" data-slide-to="2")
+		//- 							ol.carousel-indicators
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="0")
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="1").active
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="2")
 					
-					.carousel-item(style="background-image: url(assets/img/image16.jpg)")
-						.carousel-caption
-							.container
-								.hero-content
-									h1 Main Title 2
-									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
-									button.button-text View More
+		//- 			.carousel-item(style="background-image: url(assets/img/image16.jpg)")
+		//- 				.carousel-caption
+		//- 					.container
+		//- 						.hero-content
+		//- 							h1 Main Title 2
+		//- 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+		//- 							button.button-text View More
 
-									ol.carousel-indicators
-										li(data-target="#carouselExampleIndicators" data-slide-to="0")
-										li(data-target="#carouselExampleIndicators" data-slide-to="1")
-										li(data-target="#carouselExampleIndicators" data-slide-to="2").active
+		//- 							ol.carousel-indicators
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="0")
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="1")
+		//- 								li(data-target="#carouselExampleIndicators" data-slide-to="2").active
+
+
+		section#hero
+			
+			.hero-slide
+				.slide.slide1(style="background-image: url(assets/img/image14.jpg)")
+					.hero-content
+						.container
+							h1 Main Title
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+							button.button-text View More
+					.hero-overlay
+
+				.slide.slide2(style="background-image: url(assets/img/image15.jpg)")
+					.hero-content
+						.container
+							h1 Main Title
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+							button.button-text View More
+
+				.slide.slide3(style="background-image: url(assets/img/image16.jpg)")
+					.hero-content
+						.container
+							h1 Main Title
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam perspiciatis molestiae eos voluptates sunt quidem fuga laborum. Officiis deleniti eos aperiam laudantium alias dolorum quasi voluptatem nisi perspiciatis maxime!
+							button.button-text View More
+
+				
+
 
 
 		section#portfolio.wrapper
@@ -96,42 +127,42 @@ html(lang="en")
 
 				.row-section
 					.video-column
-						.video(style="background-image: url(assets/img/6.jpg)")
-							<iframe  src="https://www.youtube.com/embed/BAiN4Wyf_KY/hqdefault.jpg" poster="/imagen-preview.png" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							a(href="#video").icon-play
+						.video(id="https://www.youtube.com/embed/BAiN4Wyf_KY")
+							<iframe  src="https://www.youtube.com/embed/BAiN4Wyf_KY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 					
 					.video-column
-						.video(style="background-image: url(assets/img/7.jpg)")
-							//- video(src="")
-							a(href="#").icon-play
+						.video(id="https://www.youtube.com/embed/u9prcUCHlqM")
+							<iframe  src="https://www.youtube.com/embed/u9prcUCHlqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 					
 					.video-column
-						.video(style="background-image: url(assets/img/8.jpg)")
-							//- video(src="")
-							a(href="#").icon-play
+						.video(id="https://www.youtube.com/embed/6_B8pVoANyY")
+							<iframe  src="https://www.youtube.com/embed/6_B8pVoANyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 
 					.video-column
-						.video(style="background-image: url(assets/img/9.jpg)")
-							//- video(src="")
-							a(href="#").icon-play
+						.video(id="https://www.youtube.com/embed/PW8tr4j1ZWE")
+							<iframe  src="https://www.youtube.com/embed/PW8tr4j1ZWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 					
 					.video-column
-						.video(style="background-image: url(assets/img/10.jpg)")
-							//- video(src="")
-							a(href="#").icon-play
+						.video(id="https://www.youtube.com/embed/YZPuc3HV5O8")
+							<iframe  src="https://www.youtube.com/embed/YZPuc3HV5O8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 					
 					.video-column
-						.video(style="background-image: url(assets/img/f1.jpg)")
-							//- video(src="")
-							a(href="#").icon-play
+						.video(id="https://www.youtube.com/embed/fXiU-fObCew")
+							<iframe  src="https://www.youtube.com/embed/fXiU-fObCew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							.icon-play
 								i.far.fa-play-circle
 
-
+							
 		section#photo-landing-page.wrapper(style="background-image: url(assets/img/bg-camera.jpg)").cover-img
 			.container
 				.row 
@@ -147,13 +178,12 @@ html(lang="en")
 				p.section-description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio quibusdam cum itaque assumenda quidem officiis aliquid nulla, illum voluptate, nesciunt!
 
 				.row 
-					.col-md-10.offset-md-1.col-sm-12.offset-md-0
+					.col-md-8.offset-md-2.col-sm-12.offset-md-0
 						.video-tutorial-content
-							.video
-
-
-							a(href="#").play-tutorial
-								i.far.fa-play-circle
+							.video-tutorial
+								<iframe src="https://www.youtube.com/embed/Zrybo9Pt7ys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							//- a(href="#").play-tutorial
+							//- 	i.far.fa-play-circle
 
 
 		section#photo-gallery.wrapper
@@ -198,13 +228,12 @@ html(lang="en")
 				p.section-description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio quibusdam cum itaque assumenda quidem officiis aliquid nulla, illum voluptate, nesciunt!
 
 				.row 
-					.col-md-10.offset-md-1.col-sm-12.offset-md-0
+					.col-md-8.offset-md-2.col-sm-12.offset-md-0
 						.video-tutorial-content
-							.video
-
-
-							a(href="#").play-tutorial
-								i.far.fa-play-circle
+							.video-tutorial
+								<iframe src="https://www.youtube.com/embed/Zrybo9Pt7ys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							//- a(href="#").play-tutorial
+							//- 	i.far.fa-play-circle
 
 
 		section#photo-gallery.wrapper
@@ -302,90 +331,23 @@ html(lang="en")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//- ========== Modal 1
-	.modal-video
+	//- ========== Modal
+	.modal-video#video2
 		.modal-container
-			.video
-				iframe(src="https://www.youtube.com/embed/BAiN4Wyf_KY", frameborder="0")
+			.video-modal
+				<iframe id="yt-video-id" src="" frameborder="0" autoplay allow="autoplay" height="100%" allowfullscreen></iframe>
 			.video-title
 				h3 Video Title
 
 		.close-modal
 			p x
 	
-	//- ========== Modal 2
-	.modal-video
-		.modal-container
-			.video
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/Ar_h-uwUvDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			.video-title
-				h3 Video Title
-
-		.close-modal
-			p x
-	
-	//- ========== Modal 3
-	.modal-video
-		.modal-container
-			.video
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/u9prcUCHlqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			.video-title
-				h3 Video Title
-
-		.close-modal
-			p x
 
 
 	script(src="assets/js/jquery.min.js")
 	script(src="assets/js/jquery-ui.min.js")
 	script(src="assets/js/lightbox.js")
+	script(src="assets/js/slick.js")
 	script(src="assets/js/bootstrap.bundle.min.js")
 	script(src="assets/js/font-awesome-all.js")
 	script(src="assets/js/script.js")

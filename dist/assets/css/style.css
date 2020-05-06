@@ -112,19 +112,29 @@ a {
     width: 90%;
   }
 }
-.modal-video .modal-container .video {
+.modal-video .modal-container .video-modal {
   width: 100%;
-  max-height: 400px;
-  padding-bottom: 60%;
+  height: 400px;
   border-radius: 10px;
   background-color: #dbdbdb;
   background-image: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
-.modal-video .modal-container .video iframe {
+@media screen and (max-width: 767px) {
+  .modal-video .modal-container .video-modal {
+    height: 300px;
+  }
+}
+.modal-video .modal-container .video-modal iframe {
   height: 100%;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .modal-video .modal-container .video-modal iframe {
+    height: 300px;
+  }
 }
 .modal-video .modal-container .video-title {
   width: 100%;
@@ -143,7 +153,7 @@ a {
   right: 150px;
   cursor: pointer;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .modal-video .close-modal {
     right: 50px;
     display: none;
@@ -304,6 +314,11 @@ header {
   text-decoration: none;
 }
 
+#photoHero {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
 #photoHero .carousel-inner {
   height: 600px;
 }
@@ -367,6 +382,66 @@ header {
   margin: 0;
   padding: 0;
   margin-left: 8%;
+}
+
+#hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#hero .slide {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero .slide .hero-content {
+  width: 40%;
+  margin-left: 10%;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  #hero .slide .hero-content {
+    width: 80%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  #hero .slide .hero-content {
+    width: 100%;
+  }
+}
+#hero .slide .hero-content h1 {
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  #hero .slide .hero-content h1 {
+    margin-bottom: 30px;
+  }
+}
+#hero .slide .hero-content p {
+  margin-bottom: 30px;
+  color: #fff;
+}
+#hero .slide .hero-content .carousel-indicators {
+  left: 0;
+  right: auto;
+  top: auto;
+  bottom: -50px;
+  margin: 0;
+  padding: 0;
+  margin-left: 8%;
+}
+#hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #portfolio {
@@ -446,11 +521,12 @@ header {
 }
 #photo-tutorial .video-tutorial-content {
   width: 100%;
-  height: 700px;
+  height: 600px;
   border-radius: 10px;
   margin-top: 30px;
   box-shadow: 0px 0px 20px #917f7f;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 991px) {
   #photo-tutorial .video-tutorial-content {
@@ -467,6 +543,14 @@ header {
     height: 300px;
   }
 }
+#photo-tutorial .video-tutorial-content .video-tutorial {
+  width: 100%;
+  height: 100%;
+}
+#photo-tutorial .video-tutorial-content .video-tutorial iframe {
+  height: 100%;
+  width: 100%;
+}
 #photo-tutorial .play-tutorial {
   width: 100%;
   height: 100%;
@@ -479,14 +563,6 @@ header {
   align-items: center;
   transition: 500ms ease-in-out;
   border-radius: 10px;
-}
-#photo-tutorial .play-tutorial svg {
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-}
-#photo-tutorial .play-tutorial:hover {
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #photo-gallery {
